@@ -1,0 +1,154 @@
+body {
+	background: #eee;
+	margin: 0;
+}
+
+h1 {
+	color: #ed1;
+	background: grey;
+	padding: 1em 0;
+}
+
+nav ul li {border-radius: 50%;
+padding:1em 0;
+margin: 1em 0;
+text-decoration: none;}
+
+/*-------Media Queries ------------*/
+
+@media screen and (min-width: 680px) {}
+
+/* Slideshow
+------------------------------------------*/
+
+.rslides-container {
+    
+	border-radius:8px;
+    position: relative;
+    margin: 0 0 1em 0;
+    border: solid 1px #eee;
+    padding: 0.375em;
+    background: #fff;
+}
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+.rslides img {
+        float: left;
+        width:100%;
+    }
+
+/* Slideshow navigator arrows. */
+
+a.rslides_nav {
+    padding: 0.25em;
+    line-height: 1;
+}
+
+a.rslides_nav.prev {
+        float: left;
+    }
+
+a.rslides_nav.next {
+        float: right;
+    }
+
+a.rslides_nav:hover {
+        text-decoration: none;
+    }
+
+/* Slideshow position indicator tabs. */
+
+.rslides_tabs {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1;
+}
+
+.rslides_tabs li {
+        margin: 0.375em 0.25em 0;
+        display: inline-block;
+    }
+
+.rslides_tabs a {
+		text-indent: -9999px;
+		font-size:12px;
+		border-radius:50%;
+        display: block;
+        border: 1px solid;
+        border-color: #ccc;
+        background: #eee;
+        width: 1em;  // 12px
+        height: 1em; // 12px
+    }
+
+.rslides_tabs a:hover {
+            border-color: #000;
+        }
+
+/* Highlight the position indicator tab of currently active slide. */
+
+.rslides_here a {
+    background: #e3e3e3;
+}
+
+
+
+/* navigation ---------------*/
+
+#nav {
+    float: left;
+    padding: 2em 0 0 2em;
+
+}
+
+#nav li {
+    float: left;
+    margin: 0 0 0 5px;
+    list-style: none;
+
+}
+
+#nav li a {
+    text-decoration: none;
+    padding: 5px 15px;
+    background: #ccc;
+    border-radius: 15px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#nav li a:hover {
+    background: #333;
+}
+
+
+/* misc.
+------------------------------------------*/
+
+.clearfix:after {
+    content:".";
+    display:block;
+    height: 0;
+    clear:both;
+    visibility:hidden;
+
+}

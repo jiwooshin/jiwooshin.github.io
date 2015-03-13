@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+	<meta charset="utf-8">
+		
+	<title>The Website Title</title>
+
+	<meta name="robots" content="index, follow, noodp, noydir">
+
+	<meta name="description" content="The page description goes here." />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if lt IE 9]>
+    	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="styles.css">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+	<style>
+	#map {
+		height: 680px;
+	}
+	</style>
+
+	</head>
+
+	<body>
+
+		<h1>Leaflet Map</h1>
+
+		<ul id="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="images.html">Images</a></li>
+			<li><a href="Mobile.html">Mobile Only</a></li>
+		</ul>
+		
+		</div>
+
+
+		<div id="map"></div>
+
+		<script>
+
+		// create a map in the "map" div, set the view to a given place and zoom
+		var map = L.map('map').setView([-36.857, 174.7644], 13);
+
+		// add an OpenStreetMap tile layer
+		L.tileLayer('http://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png', {
+    	attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}).addTo(map);
+
+		// add a marker in the given location, attach some popup content to it and open the popup
+		L.marker([-36.857,174.7644]).addTo(map)
+    	.bindPopup('My Location <br> YOOBEE')
+    	.openPopup();
+
+
+
+    	// https: also suppported.
+		var Thunderforest_TransportDark = L.tileLayer('http://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+
+		</script>
+
+	</body>
+
+</html>
